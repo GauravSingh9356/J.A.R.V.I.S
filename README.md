@@ -9,8 +9,9 @@
 <li> webbrowser</li>
 <li> sys</li>
 <li> smtplib</li>
-<ul>
+
   ### What it does...
+  <ul>
 <li>Send Gmail messages</li>
 <li>Open any website with just a voice command</li>
 <li>Plays Music</li>
@@ -19,6 +20,6 @@
 </ul>
 
 ### Future Plans
-<ul>
-  Sky is limit. There are immense possibilities in this project. Will be intregating some very powerfull commands soon..
-  </ul>
+
+  <h1>Sky is limit. There are immense possibilities in this project. Will be intregating some very powerfull commands soon..</h1>
+  
