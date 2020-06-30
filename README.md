@@ -13,6 +13,7 @@
   ### What it does...
   <ul>
 <li>Send Gmail messages</li>
+  <li>Dynamic News Reporting at any time</li>
 <li>Open any website with just a voice command</li>
 <li>Plays Music</li>
 <li>Tells time</li>
