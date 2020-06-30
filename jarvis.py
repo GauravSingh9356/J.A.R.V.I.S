@@ -98,7 +98,7 @@ if __name__ == '__main__':
             os.system('shutdown /p /f')
         elif 'github' in query:
             webbrowser.get('chrome').open_new_tab(
-                'https://github.com/gauravsingh9356')
+                'profiletoopen//orjustgithub')
 
         elif 'sleep' in query:
             sys.exit()
