@@ -6,6 +6,7 @@ import datetime
 import os
 import sys
 import smtplib
+from news import speak_news
 engine = pyttsx3.init()
 voices = engine.getProperty('voices')
 engine.setProperty('voice', voices[0].id)
@@ -45,10 +46,10 @@ def wishMe():
     if hour >= 0 and hour < 12:
         speak("Good Morning SIR")
     elif hour >= 12 and hour < 18:
-        speak("Good Afternoon SIR")
+        speak("Good Afternoon, SIR")
 
     else:
-        speak('Good Evening! SIR')
+        speak('Good Evening!, SIR')
     speak('I am JARVIS. Please tell me how can I help you SIR?')
 
 
@@ -101,6 +102,10 @@ if __name__ == '__main__':
 
         elif 'sleep' in query:
             sys.exit()
+
+        elif 'news' in query:
+            speak('Ofcourse sir..')
+            speak_news()
         elif 'email to gaurav' in query:
             try:
                 speak('What should I say?')
