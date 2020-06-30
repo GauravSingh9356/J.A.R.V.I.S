@@ -11,6 +11,8 @@
 <li> smtplib</li>
 <li>requests</li>
 <li>json</li>
+<li>defflib</li>
+<li>geocoder</li>
 
   ### What it does...
   <ul>
@@ -20,6 +22,9 @@
 <li>Plays Music</li>
 <li>Tells time</li>
 <li>Wikipedia powered AI</li>
+<li>Dictionary with Intelligent Sensing i.e. auto checking if spell mistake</li>
+<li>Weather Report such as temp, wind speed, humidity, weather description</li>
+<li>Latitude and longitude</li>
 </ul>
 
 ### Future Plans
