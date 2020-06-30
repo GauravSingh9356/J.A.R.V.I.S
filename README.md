@@ -9,6 +9,7 @@
 <li> webbrowser</li>
 <li> sys</li>
 <li> smtplib</li>
+<li>requests</li>
 
   ### What it does...
   <ul>
