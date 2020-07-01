@@ -16,7 +16,9 @@
 <li>geocoder</li>
 <li>urllib</li>
 </ul>
-  ### What it does...
+
+### What it does...
+  
   <ul>
 <li>Send Gmail messages</li>
   <li>Dynamic News Reporting at any time</li>
