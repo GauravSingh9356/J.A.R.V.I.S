@@ -2,20 +2,24 @@
 ## Python powered AI
 ### Requirements:
 <ul>
-<li>datetime</li>
-<li>os</li>
-<li> pyttsx3</li>
-<li> wikipedia</li>
-<li> speech_recognition </li>
-<li> webbrowser</li>
-<li> sys</li>
-<li> smtplib</li>
-<li>requests</li>
-<li>json</li>
-<li>defflib</li>
-<li>geocoder</li>
-<li>urllib</li>
+<li>Python 3</li>
+<li>pip 3</li>
 </ul>
+
+### Python packages requirement:
+
+```
+pip3 install SpeechRecognition
+pip3 install jsonlib
+pip3 install pyttsx3
+```
+### On Ubuntu based Linux distribution you need to install the following package, so that the code to work:
+
+```
+sudo apt-get update && sudo apt-get install espeak
+sudo apt-get install portaudio19-dev
+```
+
 
 ### What it does...
   
@@ -34,5 +38,5 @@
 
 ### Future Plans
 
-  <h1>Sky is limit. There are immense possibilities in this project. Will be intregating some very powerfull commands soon..</h1>
+  <h1>Sky is limit. There are immense possibilities in this project. Will be integrating some very powerfull commands soon..</h1>
   
