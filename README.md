@@ -5,7 +5,7 @@
 <li>Python 3</li>
 <li>pip 3</li>
   <li>NewsAPI apikey used in data fetching from TOI in news module, just go  and sign and you will get the key</li>
-  <li>openweather api key for weather report, again go and just sign to get key.</li>
+  <li>openweather api key for weather report, again go and just sign to get key. Here used is FCC's but for any city you have to use openweather's api key</li>
 </ul>
 
 ### Python packages requirement:
