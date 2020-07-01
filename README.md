@@ -14,7 +14,9 @@
 </ul>
 <br>
 On Ubuntu based distribution you need to install the following package, so that the code to work:
+```
 sudo apt-get update && sudo apt-get install espeak
+```
 <br>
 
 ### What it does...
