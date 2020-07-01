@@ -8,9 +8,26 @@
 
 ### Python packages requirement
 <ul>
-<li>pip3 install SpeechRecognition</li>
-<li>pip3 install jsonlib</li>
-<li>pip3 install pyttsx3</li>
+<li>
+
+```
+pip3 install SpeechRecognition
+```
+</li>
+<li>
+
+```
+pip3 install jsonlib
+```
+
+</li>
+<li>
+
+```
+pip3 install pyttsx3
+```
+
+</li>
 </ul>
 <br>
 On Ubuntu based distribution you need to install the following package, so that the code to work:
@@ -18,7 +35,7 @@ On Ubuntu based distribution you need to install the following package, so that 
 ```
 sudo apt-get update && sudo apt-get install espeak
 ```
-<br>
+
 
 ### What it does...
   
