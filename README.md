@@ -10,19 +10,14 @@
 
 ```
 pip3 install SpeechRecognition
-```
-
-```
 pip3 install jsonlib
-```
-
-```
 pip3 install pyttsx3
 ```
 On Ubuntu based distribution you need to install the following package, so that the code to work:
 
 ```
 sudo apt-get update && sudo apt-get install espeak
+sudo apt-get install portaudio19-dev
 ```
 
 
