@@ -7,6 +7,9 @@ import os
 import sys
 import smtplib
 from news import speak_news
+from diction import translate
+from loc import weather
+from youtube import you
 engine = pyttsx3.init()
 voices = engine.getProperty('voices')
 engine.setProperty('voice', voices[0].id)
@@ -46,10 +49,12 @@ def wishMe():
     if hour >= 0 and hour < 12:
         speak("Good Morning SIR")
     elif hour >= 12 and hour < 18:
-        speak("Good Afternoon, SIR")
+        speak("Good Afternoon SIR")
 
     else:
-        speak('Good Evening!, SIR')
+        speak('Good Evening SIR')
+
+    weather()
     speak('I am JARVIS. Please tell me how can I help you SIR?')
 
 
@@ -57,8 +62,8 @@ def sendEmail(to, content):
     server = smtplib.SMTP('smtp.gmail.com', 587)
     server.ehlo()
     server.starttls()
-    server.login('uremail', 'urpassword')
-    server.sendmail('towhomtosendemail', to, content)
+    server.login('gs935688@gmail.com', 'spectrum12345#')
+    server.sendmail('gs935688email@gmail.com', to, content)
     server.close()
 
 
@@ -80,37 +85,71 @@ if __name__ == '__main__':
         elif 'open youtube' in query:
 
             webbrowser.get('chrome').open_new_tab('https://youtube.com')
+
         elif 'open google' in query:
             webbrowser.get('chrome').open_new_tab('https://google.com')
 
         elif 'open stackoverflow' in query:
             webbrowser.get('chrome').open_new_tab('https://stackoverflow.com')
+
         elif 'play music' in query:
             os.startfile("D:\\RoiNa.mp3")
+
+        elif 'search youtube' in query:
+            speak('What you want to search on Youtube?')
+            you(takeCommand())
         elif 'the time' in query:
             strTime = datetime.datetime.now().strftime("%H:%M:%S")
             speak(f'Sir, the time is {strTime}')
 
+        elif 'search' in query:
+            speak('What do you want to search for?')
+            search = takeCommand()
+            url = 'https://google.com/search?q=' + search
+            webbrowser.get('chrome').open_new_tab(
+                url)
+            speak('Here is What I found for' + search)
+
+        elif 'location' in query:
+            speak('What is the location?')
+            location = takeCommand()
+            url = 'https://google.nl/maps/place/' + location + '/&amp;'
+            webbrowser.get('chrome').open_new_tab(url)
+            speak('Here is the location ' + location)
+
+        elif 'your master' in query:
+            speak('Gaurav is my master. He created me couple of days ago')
+        elif 'your name' in query:
+            speak('My name is JARVIS')
+        elif 'stands for' in query:
+            speak('J.A.R.V.I.S stands for JUST A RATHER VERY INTELLIGENT SYSTEM')
         elif 'open code' in query:
             os.startfile(
                 "C:\\Users\\gs935\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe")
+
         elif 'shutdown' in query:
             os.system('shutdown /p /f')
+
         elif 'github' in query:
             webbrowser.get('chrome').open_new_tab(
-                'profiletoopen//orjustgithub')
+                'https://github.com/gauravsingh9356')
 
         elif 'sleep' in query:
             sys.exit()
 
+        elif 'dictionary' in query:
+            speak('What you want to search in your intelligent dictionary?')
+            translate(takeCommand())
+
         elif 'news' in query:
             speak('Ofcourse sir..')
             speak_news()
+
         elif 'email to gaurav' in query:
             try:
                 speak('What should I say?')
                 content = takeCommand()
-                to = 'whomtosendemail'
+                to = 'gs935688@gmail.com'
                 sendEmail(to, content)
                 speak('Email has been sent!')
 
