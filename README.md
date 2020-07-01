@@ -25,6 +25,7 @@
 <li>Dictionary with Intelligent Sensing i.e. auto checking if spell mistake</li>
 <li>Weather Report such as temp, wind speed, humidity, weather description</li>
 <li>Latitude and longitude</li>
+  <li>Seaches Youtube, Google, Google Maps</li>
 </ul>
 
 ### Future Plans
