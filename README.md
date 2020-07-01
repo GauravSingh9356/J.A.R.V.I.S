@@ -6,7 +6,7 @@
 <li>pip 3</li>
 </ul>
 
-### Python packages requirement
+### Python packages requirement:
 
 ```
 pip3 install SpeechRecognition
