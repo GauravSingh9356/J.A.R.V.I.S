@@ -1,6 +1,7 @@
 # J.A.R.V.I.S
 ## Python powered AI
 ### Requirements:
+<ul>
 <li>datetime</li>
 <li>os</li>
 <li> pyttsx3</li>
@@ -14,7 +15,7 @@
 <li>defflib</li>
 <li>geocoder</li>
 <li>urllib</li>
-
+</ul>
   ### What it does...
   <ul>
 <li>Send Gmail messages</li>
