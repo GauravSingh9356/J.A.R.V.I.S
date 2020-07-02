@@ -57,4 +57,4 @@ def translate(word):
 
 
 if __name__ == '__main__':
-    translate()
+    translate("Blah Blah")
