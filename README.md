@@ -14,6 +14,7 @@
 <li>defflib</li>
 <li>geocoder</li>
 <h2>Required Packages</h2>
+
 ```
 pip3 install SpeechRecognition
 pip3 install jsonlib
@@ -32,7 +33,8 @@ pip3 install wikipedia
 sudo apt-get update && sudo apt-get install espeak
 
 ```
-  ### What it does...
+
+### What it does...
   <ul>
 <li>Send Gmail messages</li>
   <li>Dynamic News Reporting at any time</li>
@@ -47,5 +49,5 @@ sudo apt-get update && sudo apt-get install espeak
 
 ### Future Plans
 
-  <h1>Sky is limit. There are immense possibilities in this project. Will be intregating some very powerfull commands soon..</h1>
+  <h1>Sky is limit. There are immense possibilities in this project. Will be integrating some very powerful commands soon..</h1>
   
