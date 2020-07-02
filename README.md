@@ -26,7 +26,7 @@ pip3 install wikipedia
 
 ```
 
-### On Ubuntu based Linux distribution you need to install the following package, so that the code to work:
+
 ### On Ubuntu based Linux distribution you need to install the following packages, so that the code to work:
 
 ```
