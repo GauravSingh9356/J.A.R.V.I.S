@@ -22,12 +22,15 @@ pip3 install PyAudio
 pip3 install geocoder
 pip3 install loc
 pip3 install wikipedia
+
 ```
+
 ### On Ubuntu based Linux distribution you need to install the following package, so that the code to work:
 ### On Ubuntu based Linux distribution you need to install the following packages, so that the code to work:
 
 ```
 sudo apt-get update && sudo apt-get install espeak
+
 ```
   ### What it does...
   <ul>
