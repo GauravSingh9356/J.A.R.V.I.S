@@ -1,5 +1,11 @@
 # J.A.R.V.I.S
 ## Python powered J.A.R.V.I.S
+[![GitHub issues](https://img.shields.io/github/issues/GauravSingh9356/J.A.R.V.I.S)](https://github.com/GauravSingh9356/J.A.R.V.I.S/issues)
+[![GitHub forks](https://img.shields.io/github/forks/GauravSingh9356/J.A.R.V.I.S)](https://github.com/GauravSingh9356/J.A.R.V.I.S/network)
+[![GitHub stars](https://img.shields.io/github/stars/GauravSingh9356/J.A.R.V.I.S)](https://github.com/GauravSingh9356/J.A.R.V.I.S/stargazers)
+[![GitHub license](https://img.shields.io/github/license/GauravSingh9356/J.A.R.V.I.S)](https://github.com/GauravSingh9356/J.A.R.V.I.S/blob/master/LICENSE)
+[![Twitter](https://img.shields.io/twitter/url?style=social)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2FGauravSingh9356%2FJ.A.R.V.I.S)
+
 ### Requirements:
 <li>datetime</li>
 <li>os</li>
