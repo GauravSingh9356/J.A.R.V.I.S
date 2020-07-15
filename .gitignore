@@ -139,4 +139,5 @@ cython_debug/
 
 # IDE/Editor
 .vscode
+.vs
 .idea

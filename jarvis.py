@@ -12,9 +12,16 @@ from loc import weather
 from youtube import you
 engine = pyttsx3.init()
 voices = engine.getProperty('voices')
-engine.setProperty('voice', voices[0].id)
+#engine.setProperty('voice', voices[0].id)
 
-# print(voices[0].id)
+for voice in voices:
+   engine.setProperty('voice', voice.id)
+   engine.say('The quick brown fox jumped over the lazy dog.')
+   print(voice.id)
+   engine.runAndWait()
+
+
+os.system("pause")
 
 
 def speak(audio):
