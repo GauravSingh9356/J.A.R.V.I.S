@@ -1,7 +1,7 @@
-from difflib import get_close_matches
-import pyttsx3
 import json
+import pyttsx3
 import speech_recognition as sr
+from difflib import get_close_matches
 
 data = json.load(open('data.json'))
 engine = pyttsx3.init()
@@ -57,4 +57,4 @@ def translate(word):
 
 
 if __name__ == '__main__':
-    translate()
+    translate("Blah Blah")

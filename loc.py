@@ -1,7 +1,7 @@
 import geocoder
-import requests
 import json
 import pyttsx3
+import requests
 
 g = geocoder.ip('me')
 

@@ -1,20 +1,20 @@
-import pyttsx3
-import wikipedia
-import speech_recognition as sr
-import webbrowser
 import datetime
 import os
-import sys
+import pyttsx3
 import smtplib
-from news import speak_news
+import speech_recognition as sr
+import sys
+import webbrowser
+import wikipedia
+
 from diction import translate
 from loc import weather
+from news import speak_news
 from youtube import you
+
 engine = pyttsx3.init()
 voices = engine.getProperty('voices')
 engine.setProperty('voice', voices[0].id)
-
-# print(voices[0].id)
 
 
 def speak(audio):
@@ -37,7 +37,6 @@ def takeCommand():
         print(f'User said: {query}\n')
 
     except Exception as e:
-        # print(e)
 
         print('Say that again please...')
         return 'None'
