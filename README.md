@@ -52,6 +52,7 @@ sudo apt-get update && sudo apt-get install espeak
 <li>Weather Report such as temp, wind speed, humidity, weather description</li>
 <li>Latitude and longitude</li>
 </ul>
+<a href="https://devophub.blogspot.com/2020/06/your-personal-assistant-jarvis.html">Read complete blog article</a>
 
 ### Future Plans
 
