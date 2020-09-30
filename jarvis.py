@@ -167,3 +167,53 @@ if __name__ == '__main__':
 
             except Exception as e:
                 speak('Sorry sir, Not able to send email at the moment')
+                
+        elif "write a note" in query: 
+			speak("What should i write, sir") 
+			note = takeCommand() 
+			file = open('jarvis.txt', 'w') 
+			speak("Sir, Should i include date and time") 
+			snfm = takeCommand() 
+			if 'yes' in snfm or 'sure' in snfm: 
+				strTime = datetime.datetime.now().strftime("% H:% M:% S") 
+				file.write(strTime) 
+				file.write(" :- ") 
+				file.write(note) 
+			else: 
+				file.write(note) 
+		
+		elif "show note" in query: 
+			speak("Showing Notes") 
+			file = open("jarvis.txt", "r") 
+			print(file.read()) 
+			speak(file.read(6)) 
+            
+            
+        elif "weather" in query: 
+			
+			# Google Open weather website 
+			# to get API of Open weather 
+			api_key = "Api key"
+			base_url = "http://api.openweathermap.org / data / 2.5 / weather?"
+			speak(" City name ") 
+			print("City name : ") 
+			city_name = takeCommand() 
+			complete_url = base_url + "appid =" + api_key + "&q =" + city_name 
+			response = requests.get(complete_url) 
+			x = response.json() 
+			
+			if x["cod"] != "404": 
+				y = x["main"] 
+				current_temperature = y["temp"] 
+				current_pressure = y["pressure"] 
+				current_humidiy = y["humidity"] 
+				z = x["weather"] 
+				weather_description = z[0]["description"] 
+				print(" Temperature (in kelvin unit) = " +str(current_temperature)+"\n atmospheric pressure (in hPa unit) ="+str(current_pressure) +"\n humidity (in percentage) = " +str(current_humidiy) +"\n description = " +str(weather_description)) 
+			
+			else: 
+				speak(" City Not Found ") 
+                
+            
+            
+         
