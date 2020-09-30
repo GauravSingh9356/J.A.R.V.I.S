@@ -59,7 +59,7 @@ sudo apt-get update && sudo apt-get install espeak
 </ul>
 <a href="https://devophub.blogspot.com/2020/06/your-personal-assistant-jarvis.html" target="_blank">Read complete blog article</a>
 
-### Future Plans
+## Contribution:
 
-  <h1>Sky is limit. There are immense possibilities in this project. Will be integrating some very powerful commands soon..</h1>
-  
+A lot can be done with this project. Core AI chatbot like functionality can be added. More python scripts can be associated. Pull requests for any such changes are accepted. Feel free to fork this project and make your own changes too.
+
