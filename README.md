@@ -44,8 +44,8 @@ sudo apt-get update && sudo apt-get install espeak
 
 ### What it does...
   <ul>
-<li>Send Gmail messages</li>
-  <li>Dynamic News Reporting at any time</li>
+<li>Send emails</li>
+  <li>Dynamic News Reporting at any time with api integration</li>
 <li>Open any website with just a voice command</li>
 <li>Plays Music</li>
 <li>Tells time</li>
@@ -53,6 +53,9 @@ sudo apt-get update && sudo apt-get install espeak
 <li>Dictionary with Intelligent Sensing i.e. auto checking if spell mistake</li>
 <li>Weather Report such as temp, wind speed, humidity, weather description</li>
 <li>Latitude and longitude</li>
+ <li>YouTube searching</li> 
+ <li>Google Map searching</a>
+ <li>YouTube Downloader integration </a>
 </ul>
 <a href="https://devophub.blogspot.com/2020/06/your-personal-assistant-jarvis.html" target="_blank">Read complete blog article</a>
 
