@@ -162,6 +162,8 @@ if __name__ == '__main__':
                 speak('Ok Sir, Opening browser...)
                 webbrowser.open(getNewsUrl())
                 speak('You can now read the full news from this website.')
+            else:
+                speak('No Problem Sir')
 
         elif 'email to gaurav' in query:
             try:
