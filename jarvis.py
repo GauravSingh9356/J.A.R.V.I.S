@@ -164,7 +164,17 @@ if __name__ == '__main__':
                 speak('You can now read the full news from this website.')
             else:
                 speak('No Problem Sir')
-
+                      
+        elif 'voice' in query:
+			try:
+				if 'female' in query:
+					engine.setProperty('voice', voices[0].id)
+				else:
+					engine.setProperty('voice', voices[1].id)
+				speak("Hello Sir, I have switched my voice. How is it?")
+			except Exception as e:
+				pass
+                      
         elif 'email to gaurav' in query:
             try:
                 speak('What should I say?')
