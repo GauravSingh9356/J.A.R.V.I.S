@@ -6,7 +6,7 @@ import datetime
 import os
 import sys
 import smtplib
-from news import speak_news
+from news import speak_news, getNewsUrl
 from diction import translate
 from loc import weather
 from youtube import you
@@ -156,6 +156,12 @@ if __name__ == '__main__':
         elif 'news' in query:
             speak('Ofcourse sir..')
             speak_news()
+            speak('Do you want to read the full news...')
+            test = takeCommand()
+            if 'yes' in test:
+                speak('Ok Sir, Opening browser...)
+                webbrowser.open(getNewsUrl())
+                speak('You can now read the full news from this website.')
 
         elif 'email to gaurav' in query:
             try:
