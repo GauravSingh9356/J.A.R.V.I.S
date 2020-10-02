@@ -85,6 +85,13 @@ if __name__ == '__main__':
         elif 'youtube downloader' in query:
             exec(open('youtube_downloader.py').read())
 
+        elif 'voice' in query:
+            if 'female' in query:
+                engine.setProperty('voice', voices[1].id)
+            else:
+                engine.setProperty('voice', voices[0].id)
+            speak("Hello Sir, I have switched my voice. How is it?")
+
         if 'jarvis are you there' in query:
             speak("Yes Sir, at your service")
         elif 'open youtube' in query:
@@ -138,7 +145,7 @@ if __name__ == '__main__':
         elif 'github' in query:
             webbrowser.get('chrome').open_new_tab(
                 'https://github.com/gauravsingh9356')
-        
+
         elif 'remember that' in query:
             speak("what should i remember sir")
             rememberMessage = takeCommand()
