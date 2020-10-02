@@ -73,6 +73,27 @@ sudo apt-get update && sudo apt-get install espeak
 
 </table>
 
+## Some Sneak peek
+
+<ul>
+  <li><h2> Jarvis, Are you there?</h2></li>
+  <li><h2> At your service, Sir</h2></li>
+  
+  <li><h2> Jarvis, What are today's news headlines? can you tell?</h2></li>
+  <li><h2>Ofcourse, Sir -> Then news headlines   Would you like to visit the news url?</h2></li>
+  
+  <li><h2> Search Youtube</h2></li>
+  <li><h2>What you want to search, Sir</h2></li>
+  <li><h2>Coding for kids</h2></li>
+  <li><h2> Opens youtube in browser with desired search query results </h2></li>
+  
+   <li><h2> Jarvis, Can you send email to Gaurav?</h2></li>
+  <li><h2>What I say sir, Sir</h2></li>
+   <li><h2>Gaurav is a good boy</h2></li>
+  <li><h2> Email is sent successfully, Sir</h2></li>
+  
+  # And so on....
+  
 <a href="https://devophub.blogspot.com/2020/06/your-personal-assistant-jarvis.html" target="_blank">Read complete blog article</a>
 
 ## Contribution:
