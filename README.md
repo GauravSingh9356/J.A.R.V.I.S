@@ -46,7 +46,7 @@ sudo apt-get update && sudo apt-get install espeak
   <ul>
 <li>Send emails</li>
   <li>Dynamic News Reporting at any time with api integration</li>
-  <li>ToDo list generator, Yes it remembers all!</li> 
+  <li>Todo list generator, Yes it remembers all!</li> 
 <li>Open any website with just a voice command</li>
 <li>Plays Music</li>
 <li>Tells time</li>
