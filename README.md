@@ -34,6 +34,8 @@ pip3 install wikipedia
 
 ```
 
+<img src="images/Screenshot%20(138).png"/>
+
 
 ### On Ubuntu based Linux distribution you need to install the following packages, so that the code works:
 
