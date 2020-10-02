@@ -73,7 +73,7 @@ sudo apt-get update && sudo apt-get install espeak
 
 </table>
 
-## Some Sneak peek
+## Some Sneak peeks:
 
 <ul>
   <li><h2> Jarvis, Are you there?</h2></li>
