@@ -34,8 +34,6 @@ pip3 install wikipedia
 
 ```
 
-<img src="images/Screenshot%20(138).png"/>
-
 
 ### On Ubuntu based Linux distribution you need to install the following packages, so that the code works:
 
@@ -61,6 +59,20 @@ sudo apt-get update && sudo apt-get install espeak
  <li>YouTube Downloader, download any youtube video by just putting url of video</li>
  <li>Now Master can switch b/w J.A.R.V.I.S and F.R.I.D.A.Y, switch to female voice assistant</li>
 </ul>
+
+<table>
+  <tr>
+    <td><img src="images/Screenshot%20(138).png"/></td>
+
+</tr>
+<tr>
+<td><img src="images/email.jpg"/></td>
+
+<td><img src="images/location.png"/></td>
+</tr>
+
+</table>
+
 <a href="https://devophub.blogspot.com/2020/06/your-personal-assistant-jarvis.html" target="_blank">Read complete blog article</a>
 
 ## Contribution:
