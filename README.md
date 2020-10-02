@@ -56,7 +56,7 @@ sudo apt-get update && sudo apt-get install espeak
 <li>Latitude and longitude</li>
  <li>YouTube searching</li> 
  <li>Google Map searching</a>
- <li>YouTube Downloader integration </li>
+ <li>YouTube Downloader, download any youtube video by just putting url of video</li>
  <li>Now Master can switch b/w J.A.R.V.I.S and F.R.I.D.A.Y, switch to female voice assistant</li>
 </ul>
 <a href="https://devophub.blogspot.com/2020/06/your-personal-assistant-jarvis.html" target="_blank">Read complete blog article</a>
