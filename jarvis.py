@@ -82,6 +82,11 @@ if __name__ == '__main__':
             print(results)
             speak(results)
 
+        elif 'youtube downloader' in query:
+            exec(open('youtube_downloader.py').read())
+
+        if 'jarvis are you there' in query:
+            speak("Yes Sir, at your service")
         elif 'open youtube' in query:
 
             webbrowser.get('chrome').open_new_tab('https://youtube.com')
