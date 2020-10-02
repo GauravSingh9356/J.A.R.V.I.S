@@ -1,5 +1,13 @@
 # J.A.R.V.I.S
 ## Python powered J.A.R.V.I.S
+[![GitHub issues](https://img.shields.io/github/issues/GauravSingh9356/J.A.R.V.I.S)](https://github.com/GauravSingh9356/J.A.R.V.I.S/issues)
+[![GitHub forks](https://img.shields.io/github/forks/GauravSingh9356/J.A.R.V.I.S)](https://github.com/GauravSingh9356/J.A.R.V.I.S/network)
+[![GitHub stars](https://img.shields.io/github/stars/GauravSingh9356/J.A.R.V.I.S)](https://github.com/GauravSingh9356/J.A.R.V.I.S/stargazers)
+[![GitHub license](https://img.shields.io/github/license/GauravSingh9356/J.A.R.V.I.S)](https://github.com/GauravSingh9356/J.A.R.V.I.S/blob/master/LICENSE)
+[![Twitter](https://img.shields.io/twitter/url?style=social)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2FGauravSingh9356%2FJ.A.R.V.I.S)
+
+<img src="jarvis1.jpg"/>
+
 ### Requirements:
 <li>datetime</li>
 <li>os</li>
@@ -27,7 +35,7 @@ pip3 install wikipedia
 ```
 
 
-### On Ubuntu based Linux distribution you need to install the following packages, so that the code to work:
+### On Ubuntu based Linux distribution you need to install the following packages, so that the code works:
 
 ```
 sudo apt-get update && sudo apt-get install espeak
@@ -36,8 +44,8 @@ sudo apt-get update && sudo apt-get install espeak
 
 ### What it does...
   <ul>
-<li>Send Gmail messages</li>
-  <li>Dynamic News Reporting at any time</li>
+<li>Send emails</li>
+  <li>Dynamic News Reporting at any time with api integration</li>
 <li>Open any website with just a voice command</li>
 <li>Plays Music</li>
 <li>Tells time</li>
@@ -45,9 +53,13 @@ sudo apt-get update && sudo apt-get install espeak
 <li>Dictionary with Intelligent Sensing i.e. auto checking if spell mistake</li>
 <li>Weather Report such as temp, wind speed, humidity, weather description</li>
 <li>Latitude and longitude</li>
+ <li>YouTube searching</li> 
+ <li>Google Map searching</a>
+ <li>YouTube Downloader integration </a>
 </ul>
+<a href="https://devophub.blogspot.com/2020/06/your-personal-assistant-jarvis.html" target="_blank">Read complete blog article</a>
 
-### Future Plans
+## Contribution:
 
-  <h1>Sky is limit. There are immense possibilities in this project. Will be integrating some very powerful commands soon..</h1>
-  
+A lot can be done with this project. Core AI chatbot like functionality can be added. More python scripts can be associated. Pull requests for any such changes are accepted. Feel free to fork this project and make your own changes too.
+
