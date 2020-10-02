@@ -25,6 +25,8 @@ def speak_news():
         speak('Moving on the next news headline..')
     speak('These were the top headlines, Have a nice day Sir!!..')
 
+def getNewsUrl():
+    return 'http://newsapi.org/v2/top-headlines?sources=the-times-of-india&apiKey=yourapikey'
 
 if __name__ == '__main__':
     speak_news()
