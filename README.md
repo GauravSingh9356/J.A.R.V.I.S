@@ -46,6 +46,7 @@ sudo apt-get update && sudo apt-get install espeak
   <ul>
 <li>Send emails</li>
   <li>Dynamic News Reporting at any time with api integration</li>
+  <li>ToDo list generator, Yes it remembers all!</li> 
 <li>Open any website with just a voice command</li>
 <li>Plays Music</li>
 <li>Tells time</li>
@@ -55,7 +56,8 @@ sudo apt-get update && sudo apt-get install espeak
 <li>Latitude and longitude</li>
  <li>YouTube searching</li> 
  <li>Google Map searching</a>
- <li>YouTube Downloader integration </a>
+ <li>YouTube Downloader integration </li>
+ <li>Now Master can switch b/w J.A.R.V.I.S and F.R.I.D.A.Y, switch to female voice assistant</li>
 </ul>
 <a href="https://devophub.blogspot.com/2020/06/your-personal-assistant-jarvis.html" target="_blank">Read complete blog article</a>
 
