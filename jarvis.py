@@ -104,8 +104,7 @@ if __name__ == '__main__':
         elif 'open stackoverflow' in query:
             webbrowser.get('chrome').open_new_tab('https://stackoverflow.com')
 
-        elif 'play music' in query:
-            os.startfile("D:\\RoiNa.mp3")
+      
 
         elif 'search youtube' in query:
             speak('What you want to search on Youtube?')
