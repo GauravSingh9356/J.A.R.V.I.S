@@ -121,7 +121,39 @@ if __name__ == '__main__':
             webbrowser.get('chrome').open_new_tab(
                 url)
             speak('Here is What I found for' + search)
+	
+	# playing random music or you can simply play music by calling its name 
+	 elif 'play music' in query:
+            speak("sir,which song should i play ")
+            song_name=takeCommandfromUser()
 
+            if "play random" in song_name or "random song" in song_name or "random music" in song_name:
+
+                n=random.randint(1,11)
+                music='C:\\Music\\audios'
+                songs=os.listdir(music)
+                print(songs)
+                os.startfile(os.path.join(music,songs[n]))  #playing song
+
+            else:
+                try:
+		    # put the path wher you have all the music fil
+                    music_path = "C:\\Music\\audios"
+                    file_search.set_root(music_path)
+                    songs = file_search.searchFile(song_name)
+                    # print(songs)
+                    song_uri = songs[0]
+
+                    song_in_str = ""
+                    for ele in song_uri:
+                        song_in_str += ele
+                    print(song_in_str)
+                    webbrowser.open(song_in_str)
+                except Exception as e:
+                    print("sir system dont have this song")
+
+	
+	
         elif 'location' in query:
             speak('What is the location?')
             location = takeCommand()
@@ -197,3 +229,4 @@ if __name__ == '__main__':
 
             except Exception as e:
                 speak('Sorry sir, Not able to send email at the moment')
+		
