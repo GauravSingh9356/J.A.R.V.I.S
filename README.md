@@ -1,14 +1,16 @@
 # J.A.R.V.I.S
+
 ## Python powered J.A.R.V.I.S
+
 [![GitHub issues](https://img.shields.io/github/issues/GauravSingh9356/J.A.R.V.I.S)](https://github.com/GauravSingh9356/J.A.R.V.I.S/issues)
 [![GitHub forks](https://img.shields.io/github/forks/GauravSingh9356/J.A.R.V.I.S)](https://github.com/GauravSingh9356/J.A.R.V.I.S/network)
 [![GitHub stars](https://img.shields.io/github/stars/GauravSingh9356/J.A.R.V.I.S)](https://github.com/GauravSingh9356/J.A.R.V.I.S/stargazers)
 [![GitHub license](https://img.shields.io/github/license/GauravSingh9356/J.A.R.V.I.S)](https://github.com/GauravSingh9356/J.A.R.V.I.S/blob/master/LICENSE)
 
-
 <img src="jarvis1.jpg"/>
 
 ### Requirements:
+
 <li>datetime</li>
 <li>os</li>
 <li> pyttsx3</li>
@@ -21,6 +23,10 @@
 <li>json</li>
 <li>defflib</li>
 <li>geocoder</li>
+<li>pyjokes</li>
+<li>psutil</li>
+<li> pyautogui</li>
+
 <h2>Required Packages</h2>
 
 ```
@@ -31,9 +37,11 @@ pip3 install PyAudio
 pip3 install geocoder
 pip3 install loc
 pip3 install wikipedia
+pip install psutil
+pip install pyjokes
+
 
 ```
-
 
 ### On Ubuntu based Linux distribution you need to install the following packages, so that the code works:
 
@@ -43,6 +51,7 @@ sudo apt-get update && sudo apt-get install espeak
 ```
 
 ### What it does...
+
   <ul>
 <li>Send emails</li>
   <li>Dynamic News Reporting at any time with api integration</li>
@@ -99,4 +108,3 @@ sudo apt-get update && sudo apt-get install espeak
 ## Contribution:
 
 A lot can be done with this project. Core AI chatbot like functionality can be added. More python scripts can be associated. Pull requests for any such changes are accepted. Feel free to fork this project and make your own changes too.
-
