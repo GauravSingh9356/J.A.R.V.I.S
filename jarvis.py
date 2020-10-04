@@ -6,6 +6,9 @@ import datetime
 import os
 import sys
 import smtplib
+import psutil
+import pyjokes
+import pyautogui
 from news import speak_news, getNewsUrl
 from diction import translate
 from loc import weather
@@ -20,6 +23,22 @@ engine.setProperty('voice', voices[0].id)
 def speak(audio):
     engine.say(audio)
     engine.runAndWait()
+    
+def screenshot():
+    img=pyautogui.screenshot()
+    img.save('path of folder you want to save/screenshot.png')
+    
+def cpu():
+    usage=str(psutil.cpu_percent())
+    speak("CPU is at"+usage)
+
+    battery = psutil.sensors_battery()
+    speak("battery is at")
+    speak(battery.percent)
+
+def joke():
+    for i in range(5):
+        speak(pyjokes.get_jokes()[i])
 
 
 def takeCommand():
@@ -94,10 +113,21 @@ if __name__ == '__main__':
 
         if 'jarvis are you there' in query:
             speak("Yes Sir, at your service")
+            
         elif 'open youtube' in query:
 
             webbrowser.get('chrome').open_new_tab('https://youtube.com')
+            
+        elif 'cpu' in query:
+            cpu()
 
+        elif 'joke' in query:
+            joke()
+
+        elif 'screenshot' in query:
+            speak("taking screenshot")
+            screenshot()
+            
         elif 'open google' in query:
             webbrowser.get('chrome').open_new_tab('https://google.com')
 
@@ -171,22 +201,19 @@ if __name__ == '__main__':
             speak('Do you want to read the full news...')
             test = takeCommand()
             if 'yes' in test:
-                speak('Ok Sir, Opening browser...)
+                speak('Ok Sir, Opening browser...')
                 webbrowser.open(getNewsUrl())
                 speak('You can now read the full news from this website.')
             else:
                 speak('No Problem Sir')
                       
         elif 'voice' in query:
-			try:
-				if 'female' in query:
-					engine.setProperty('voice', voices[0].id)
-				else:
-					engine.setProperty('voice', voices[1].id)
-				speak("Hello Sir, I have switched my voice. How is it?")
-			except Exception as e:
-				pass
-                      
+            if 'female' in query:
+                engine.setProperty('voice', voices[0].id)
+            else:
+                engine.setProperty('voice', voices[1].id)
+            speak("Hello Sir, I have switched my voice. How is it?")
+
         elif 'email to gaurav' in query:
             try:
                 speak('What should I say?')
