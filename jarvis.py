@@ -13,6 +13,12 @@ from news import speak_news, getNewsUrl
 from diction import translate
 from loc import weather
 from youtube import you
+import psutil
+import pyjokes
+
+
+
+
 engine = pyttsx3.init()
 voices = engine.getProperty('voices')
 engine.setProperty('voice', voices[0].id)
@@ -84,7 +90,24 @@ def sendEmail(to, content):
     server.login('email', 'password')
     server.sendmail('email', to, content)
     server.close()
+    
 
+def cpu():
+    usage=str(psutil.cpu_percent())
+    speak("CPU is at"+usage)
+
+    battery = psutil.sensors_battery()
+    speak("battery is at")
+    speak(battery.percent)
+
+def joke():
+    speak(pyjokes.get_jokes())
+
+def screenshot():
+    img=pyautogui.screenshot()
+    img.save('path of folder you want to save/screenshot.png')
+    
+    
 
 if __name__ == '__main__':
     chrome_path = 'C:\Program Files (x86)\Google\Chrome\Application\chrome.exe'
@@ -171,6 +194,16 @@ if __name__ == '__main__':
 
         elif 'shutdown' in query:
             os.system('shutdown /p /f')
+            
+        elif 'cpu' in query:
+            cpu()
+            
+        elif 'joke' in query:
+            joke()
+            
+        elif 'screenshot' in query:
+            speak("taking screenshot")
+            screenshot()
 
         elif 'github' in query:
             webbrowser.get('chrome').open_new_tab(
