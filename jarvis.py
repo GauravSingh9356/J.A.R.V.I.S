@@ -12,12 +12,12 @@ import pyautogui
 from news import speak_news, getNewsUrl
 from diction import translate
 from loc import weather
-from youtube import you
+from youtube import youtube
 import psutil
 import pyjokes
-
-
-
+from sys import platform
+import os
+import getpass
 
 engine = pyttsx3.init()
 voices = engine.getProperty('voices')
@@ -29,18 +29,21 @@ engine.setProperty('voice', voices[0].id)
 def speak(audio):
     engine.say(audio)
     engine.runAndWait()
-    
+
+
 def screenshot():
-    img=pyautogui.screenshot()
+    img = pyautogui.screenshot()
     img.save('path of folder you want to save/screenshot.png')
-    
+
+
 def cpu():
-    usage=str(psutil.cpu_percent())
+    usage = str(psutil.cpu_percent())
     speak("CPU is at"+usage)
 
     battery = psutil.sensors_battery()
     speak("battery is at")
     speak(battery.percent)
+
 
 def joke():
     for i in range(5):
@@ -48,6 +51,7 @@ def joke():
 
 
 def takeCommand():
+
     r = sr.Recognizer()
     with sr.Microphone() as source:
         print('Listening...')
@@ -90,28 +94,41 @@ def sendEmail(to, content):
     server.login('email', 'password')
     server.sendmail('email', to, content)
     server.close()
-    
+
 
 def cpu():
-    usage=str(psutil.cpu_percent())
+    usage = str(psutil.cpu_percent())
     speak("CPU is at"+usage)
 
     battery = psutil.sensors_battery()
     speak("battery is at")
     speak(battery.percent)
 
+
 def joke():
     for i in range(5):
         speak(pyjokes.get_jokes()[i])
 
+
 def screenshot():
-    img=pyautogui.screenshot()
+    img = pyautogui.screenshot()
     img.save('path of folder you want to save/screenshot.png')
-    
-    
+
 
 if __name__ == '__main__':
-    chrome_path = 'C:\Program Files (x86)\Google\Chrome\Application\chrome.exe'
+
+    if platform == "linux" or platform == "linux2":
+        chrome_path = '/usr/bin/google-chrome'
+
+    elif platform == "darwin":
+        chrome_path = 'open -a /Applications/Google\ Chrome.app'
+
+    elif platform == "win32":
+        chrome_path = 'C:\Program Files (x86)\Google\Chrome\Application\chrome.exe'
+    else:
+        print('Unsupported OS')
+        exit(1)
+
     webbrowser.register(
         'chrome', None, webbrowser.BackgroundBrowser(chrome_path))
     wishMe()
@@ -137,11 +154,11 @@ if __name__ == '__main__':
 
         if 'jarvis are you there' in query:
             speak("Yes Sir, at your service")
-            
+
         elif 'open youtube' in query:
 
             webbrowser.get('chrome').open_new_tab('https://youtube.com')
-            
+
         elif 'cpu' in query:
             cpu()
 
@@ -151,7 +168,7 @@ if __name__ == '__main__':
         elif 'screenshot' in query:
             speak("taking screenshot")
             screenshot()
-            
+
         elif 'open google' in query:
             webbrowser.get('chrome').open_new_tab('https://google.com')
 
@@ -163,7 +180,7 @@ if __name__ == '__main__':
 
         elif 'search youtube' in query:
             speak('What you want to search on Youtube?')
-            you(takeCommand())
+            youtube(takeCommand())
         elif 'the time' in query:
             strTime = datetime.datetime.now().strftime("%H:%M:%S")
             speak(f'Sir, the time is {strTime}')
@@ -184,24 +201,35 @@ if __name__ == '__main__':
             speak('Here is the location ' + location)
 
         elif 'your master' in query:
-            speak('Gaurav is my master. He created me couple of days ago')
+            if platform == "win32" or "darwin":
+                speak('Gaurav is my master. He created me couple of days ago')
+            elif platform == "linux" or platform == "linux2":
+                name = getpass.getuser()
+                speak(name, 'is my master. He is running me right now')
+
         elif 'your name' in query:
             speak('My name is JARVIS')
         elif 'stands for' in query:
             speak('J.A.R.V.I.S stands for JUST A RATHER VERY INTELLIGENT SYSTEM')
         elif 'open code' in query:
-            os.startfile(
-                "C:\\Users\\gs935\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe")
+            if platform == "win32":
+                os.startfile(
+                    "C:\\Users\\gs935\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe")
+            elif platform == "linux" or platform == "linux2" or "darwin":
+                os.system('code .')
 
         elif 'shutdown' in query:
-            os.system('shutdown /p /f')
-            
+            if platform == "win32":
+                os.system('shutdown /p /f')
+            elif platform == "linux" or platform == "linux2" or "darwin":
+                os.system('poweroff')
+
         elif 'cpu' in query:
             cpu()
-            
+
         elif 'joke' in query:
             joke()
-            
+
         elif 'screenshot' in query:
             speak("taking screenshot")
             screenshot()
@@ -240,7 +268,7 @@ if __name__ == '__main__':
                 speak('You can now read the full news from this website.')
             else:
                 speak('No Problem Sir')
-                      
+
         elif 'voice' in query:
             if 'female' in query:
                 engine.setProperty('voice', voices[0].id)
