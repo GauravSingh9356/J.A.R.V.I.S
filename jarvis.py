@@ -101,7 +101,8 @@ def cpu():
     speak(battery.percent)
 
 def joke():
-    speak(pyjokes.get_jokes())
+    for i in range(5):
+        speak(pyjokes.get_jokes()[i])
 
 def screenshot():
     img=pyautogui.screenshot()
