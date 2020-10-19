@@ -79,7 +79,8 @@ sudo apt-get update && sudo apt-get install espeak
 
 <td><img src="images/location.png"/></td>
 </tr>
-
+<td><img src="images/pytube.png"/></td>
+</tr>
 </table>
 
 ## Some Sneak peeks:
