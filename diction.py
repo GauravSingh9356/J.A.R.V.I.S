@@ -50,7 +50,8 @@ def translate(word):
         elif 'no' in ans:
             speak("Word doesn't exist. Please make sure you spelled it correctly.")
         else:
-            speak("We didn't understand your entry.")
+            #changed from we to I
+            speak("I did not understand your entry.")
 
     else:
         speak("Word doesn't exist. Please double check it.")
