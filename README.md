@@ -104,7 +104,7 @@ sudo apt-get update && sudo apt-get install espeak
   
   # And so on....
   
-<a href="https://devophub.blogspot.com/2020/10/jarvis-v20-is-released-come-and.html" target="_blank">Read complete blog article</a>
+<a href="https://techtalkswithgaurav.blogspot.com/2020/06/your-personal-assistant-jarvis.html" target="_blank">Read complete blog article</a>
 
 ## Contribution:
 
