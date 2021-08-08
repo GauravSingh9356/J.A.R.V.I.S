@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 altgraph==0.17
 appdirs==1.4.4
 asgiref==3.2.7
@@ -211,4 +210,3 @@ soupsieve==2.0.1
 SpeechRecognition==3.8.1
 urllib3==1.25.9
 wikipedia==1.4.0
->>>>>>> cb24880e4000225a63a59278a3e967f3cee6ab15
