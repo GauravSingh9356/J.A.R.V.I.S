@@ -158,6 +158,9 @@ if __name__ == '__main__':
         elif 'open youtube' in query:
 
             webbrowser.get('chrome').open_new_tab('https://youtube.com')
+            
+        elif 'open amazon' in query:
+            webbrowser.get('chrome').open_new_tab('https://amazon.com')
 
         elif 'cpu' in query:
             cpu()
@@ -226,6 +229,8 @@ if __name__ == '__main__':
 
         elif 'cpu' in query:
             cpu()
+        elif 'your friend' in query:
+            speak('My friends are Google assisstant alexa and siri')
 
         elif 'joke' in query:
             joke()
