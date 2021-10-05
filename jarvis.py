@@ -154,6 +154,10 @@ if __name__ == '__main__':
 
         if 'jarvis are you there' in query:
             speak("Yes Sir, at your service")
+        if 'jarvis who made you' in query:
+            speak("Yes Sir, my master build me in AI")
+            
+         
 
         elif 'open youtube' in query:
 
