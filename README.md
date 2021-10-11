@@ -30,17 +30,12 @@
 <h2>Required Packages</h2>
 
 ```
-pip3 install SpeechRecognition
-pip3 install jsonlib
-pip3 install pyttsx3
-pip3 install PyAudio
-pip3 install geocoder
-pip3 install loc
-pip3 install wikipedia
-pip install psutil
-pip install pyjokes
+pip install -r requirements.txt
+```
 
-
+> _ To install PyAudio on windows head over to https://www.lfd.uci.edu/~gohlke/pythonlibs/#pyaudio and download the .whl for your machine and run the installation as shown below, then install the remaining dependencies from the requirements.txt file. You may remove pyAduio from the requirements file if it interrupts your installation (its there for unix users)
+```bash
+pip install PyAudio‑0.2.11‑cp<version>‑cp<version>m‑win_amd<architecture>.whl
 ```
 
 ### On Ubuntu based Linux distribution you need to install the following packages, so that the code works:
