@@ -58,30 +58,8 @@ class Jarvis:
         server.sendmail('email', to, content)
         server.close()
 
-    def execute_query(self):
-        query = self.takeCommand()
-
-
-
-if __name__ == '__main__':
-
-    if platform == "linux" or platform == "linux2":
-        chrome_path = '/usr/bin/google-chrome'
-
-    elif platform == "darwin":
-        chrome_path = 'open -a /Applications/Google\ Chrome.app'
-
-    elif platform == "win32":
-        chrome_path = 'C:\Program Files (x86)\Google\Chrome\Application\chrome.exe'
-    else:
-        print('Unsupported OS')
-        exit(1)
-
-    webbrowser.register(
-        'chrome', None, webbrowser.BackgroundBrowser(chrome_path))
-    wishMe()
-    while True:
-        query = takeCommand().lower()
+    def execute_query(self, query):
+        # TODO: make this more concise
         if 'wikipedia' in query:
             speak('Searching Wikipedia....')
             query = query.replace('wikipedia', '')
@@ -89,7 +67,6 @@ if __name__ == '__main__':
             speak('According to Wikipedia')
             print(results)
             speak(results)
-
         elif 'youtube downloader' in query:
             exec(open('youtube_downloader.py').read())
 
@@ -234,8 +211,17 @@ if __name__ == '__main__':
                 speak('What should I say?')
                 content = takeCommand()
                 to = 'email'
-                sendEmail(to, content)
+                self.sendEmail(to, content)
                 speak('Email has been sent!')
 
             except Exception as e:
                 speak('Sorry sir, Not able to send email at the moment')
+
+
+
+if __name__ == '__main__':
+    bot_ = Jarvis()
+    bot_.wishMe()
+    while True:
+        query = takeCommand().lower()
+        bot_.execute_query(query)

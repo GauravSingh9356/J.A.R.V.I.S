@@ -3,16 +3,17 @@ import pyautogui
 import psutil
 import pyjokes
 import speech_recognition as sr
-import datetime
+import json
 import requests
 import geocoder
+from difflib import get_close_matches
 
 
 engine = pyttsx3.init()
 voices = engine.getProperty('voices')
 engine.setProperty('voice', voices[0].id)
 g = geocoder.ip('me')
-
+data = json.load(open('data.json'))
 
 def speak(audio) -> None:
         engine.say(audio)
@@ -71,3 +72,23 @@ def weather():
         speak('Wind speed is ' + str(wind['speed']) + ' metre per second')
         speak('Temperature: ' + str(main['temp']) + 'degree celcius')
         speak('Humidity is ' + str(main['humidity']))
+
+
+def translate(word):
+    word = word.lower()
+    if word in data:
+        speak(data[word])
+    elif len(get_close_matches(word, data.keys())) > 0:
+        x = get_close_matches(word, data.keys())[0]
+        speak('Did you mean ' + x +
+              ' instead,  respond with Yes or No.')
+        ans = takeCommand().lower()
+        if 'yes' in ans:
+            speak(data[x])
+        elif 'no' in ans:
+            speak("Word doesn't exist. Please make sure you spelled it correctly.")
+        else:
+            speak("We didn't understand your entry.")
+
+    else:
+        speak("Word doesn't exist. Please double check it.")
