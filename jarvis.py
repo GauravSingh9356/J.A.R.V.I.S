@@ -6,15 +6,10 @@ import datetime
 import os
 import sys
 import smtplib
-import psutil
-import pyjokes
-import pyautogui
 from news import speak_news, getNewsUrl
 from diction import translate
-from loc import weather
+from helpers import *
 from youtube import youtube
-import psutil
-import pyjokes
 from sys import platform
 import os
 import getpass
@@ -25,94 +20,47 @@ engine.setProperty('voice', voices[0].id)
 
 # print(voices[0].id)
 
+class Jarvis:
+    def __init__(self) -> None:
+        if platform == "linux" or platform == "linux2":
+            self.chrome_path = '/usr/bin/google-chrome'
 
-def speak(audio):
-    engine.say(audio)
-    engine.runAndWait()
+        elif platform == "darwin":
+            self.chrome_path = 'open -a /Applications/Google\ Chrome.app'
 
+        elif platform == "win32":
+            self.chrome_path = 'C:\Program Files (x86)\Google\Chrome\Application\chrome.exe'
+        else:
+            print('Unsupported OS')
+            exit(1)
+        webbrowser.register(
+            'chrome', None, webbrowser.BackgroundBrowser(self.chrome_path)
+        )
 
-def screenshot():
-    img = pyautogui.screenshot()
-    img.save('path of folder you want to save/screenshot.png')
+    def wishMe(self) -> None:
+        hour = int(datetime.datetime.now().hour)
+        if hour >= 0 and hour < 12:
+            speak("Good Morning SIR")
+        elif hour >= 12 and hour < 18:
+            speak("Good Afternoon SIR")
 
+        else:
+            speak('Good Evening SIR')
 
-def cpu():
-    usage = str(psutil.cpu_percent())
-    speak("CPU is at"+usage)
+        weather()
+        speak('I am JARVIS. Please tell me how can I help you SIR?')
 
-    battery = psutil.sensors_battery()
-    speak("battery is at")
-    speak(battery.percent)
+    def sendEmail(self, to, content) -> None:
+        server = smtplib.SMTP('smtp.gmail.com', 587)
+        server.ehlo()
+        server.starttls()
+        server.login('email', 'password')
+        server.sendmail('email', to, content)
+        server.close()
 
+    def execute_query(self):
+        query = self.takeCommand()
 
-def joke():
-    for i in range(5):
-        speak(pyjokes.get_jokes()[i])
-
-
-def takeCommand():
-
-    r = sr.Recognizer()
-    with sr.Microphone() as source:
-        print('Listening...')
-        r.pause_threshold = 1
-        r.energy_threshold = 494
-        r.adjust_for_ambient_noise(source, duration=1.5)
-        audio = r.listen(source)
-
-    try:
-        print('Recognizing..')
-        query = r.recognize_google(audio, language='en-in')
-        print(f'User said: {query}\n')
-
-    except Exception as e:
-        # print(e)
-
-        print('Say that again please...')
-        return 'None'
-    return query
-
-
-def wishMe():
-    hour = int(datetime.datetime.now().hour)
-    if hour >= 0 and hour < 12:
-        speak("Good Morning SIR")
-    elif hour >= 12 and hour < 18:
-        speak("Good Afternoon SIR")
-
-    else:
-        speak('Good Evening SIR')
-
-    weather()
-    speak('I am JARVIS. Please tell me how can I help you SIR?')
-
-
-def sendEmail(to, content):
-    server = smtplib.SMTP('smtp.gmail.com', 587)
-    server.ehlo()
-    server.starttls()
-    server.login('email', 'password')
-    server.sendmail('email', to, content)
-    server.close()
-
-
-def cpu():
-    usage = str(psutil.cpu_percent())
-    speak("CPU is at"+usage)
-
-    battery = psutil.sensors_battery()
-    speak("battery is at")
-    speak(battery.percent)
-
-
-def joke():
-    for i in range(5):
-        speak(pyjokes.get_jokes()[i])
-
-
-def screenshot():
-    img = pyautogui.screenshot()
-    img.save('path of folder you want to save/screenshot.png')
 
 
 if __name__ == '__main__':
