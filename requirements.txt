@@ -14,7 +14,7 @@ loc==0.0.2
 MouseInfo==0.1.3
 Pillow==8.3.2
 psutil==5.8.0
-PyAudio @ file:///C:/Users/Paulo/Documents/projects/hacktoberfest/J.A.R.V.I.S/PyAudio-0.2.11-cp38-cp38-win_amd64.whl
+PyAudio
 PyAutoGUI==0.9.53
 PyGetWindow==0.0.9
 pyjokes==0.6.0
