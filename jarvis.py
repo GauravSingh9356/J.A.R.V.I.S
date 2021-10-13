@@ -141,6 +141,9 @@ class Jarvis:
 
         elif 'your name' in query:
             speak('My name is JARVIS')
+        elif 'who made you' in query:
+            speak('I was created by my AI master in 2021')
+            
         elif 'stands for' in query:
             speak('J.A.R.V.I.S stands for JUST A RATHER VERY INTELLIGENT SYSTEM')
         elif 'open code' in query:
