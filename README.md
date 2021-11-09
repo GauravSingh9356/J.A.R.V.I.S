@@ -22,6 +22,7 @@
 <li>datetime</li>
 <li>os</li>
 <li> pyttsx3</li>
+<li> tesseract</li>
 <li> wikipedia</li>
 <li> speech_recognition </li>
 <li> webbrowser</li>
@@ -58,6 +59,7 @@ sudo apt-get update && sudo apt-get install espeak
   <ul>
 <li>Send emails</li>
   <li>Dynamic News Reporting at any time with api integration</li>
+   <li>Optical Text recognition (OCR)</li>
   <li>Todo list generator, Yes it remembers all!</li> 
 <li>Open any website with just a voice command</li>
 <li>Plays Music</li>
@@ -94,6 +96,8 @@ sudo apt-get update && sudo apt-get install espeak
   
   <li><h2> Jarvis, What are today's news headlines? can you tell?</h2></li>
   <li><h2>Ofcourse, Sir -> Then news headlines   Would you like to visit the news url?</h2></li>
+  
+   <li><h2>Open Text Recognition</h2></li>
   
   <li><h2> Search Youtube</h2></li>
   <li><h2>What you want to search, Sir</h2></li>
