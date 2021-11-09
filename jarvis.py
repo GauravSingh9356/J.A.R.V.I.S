@@ -7,6 +7,7 @@ import os
 import sys
 import smtplib
 from news import speak_news, getNewsUrl
+from OCR import OCR
 from diction import translate
 from helpers import *
 from youtube import youtube
@@ -69,7 +70,10 @@ class Jarvis:
             speak(results)
         elif 'youtube downloader' in query:
             exec(open('youtube_downloader.py').read())
-
+            
+        elif 'Optical Text Recognition' or 'Text Recognition' in query:
+            OCR()
+            
         elif 'voice' in query:
             if 'female' in query:
                 engine.setProperty('voice', voices[1].id)
