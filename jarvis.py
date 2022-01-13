@@ -145,6 +145,10 @@ class Jarvis:
 
         elif 'your name' in query:
             speak('My name is JARVIS')
+        elif 'are you dumb' in query:
+            speak('No, but you are dumb')
+        elif 'who is the ugliest in the world' in query:
+            speak('You')
         elif 'who made you' in query:
             speak('I was created by my AI master in 2021')
             
