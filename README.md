@@ -1,5 +1,5 @@
 
-<img src="https://github.com/GauravSingh9356/J.A.R.V.I.S/blob/master/ReadmeHeader.gif"/>
+<img src="https://github.com/GauravSingh9356/J.A.R.V.I.S/blob/master/ReadmeHeader.gif">
 <div align="center">
   
 [![Welcome to my profile](https://img.shields.io/badge/Hello,Devs!-Welcome-blue.svg?style=flat&logo=github)](https://github.com/gauravsingh9356/J.A.R.V.I.S)
@@ -15,7 +15,7 @@
 
 
 
-<img src="jarvis1.jpg"/>
+
 
 ### Requirements:
 
@@ -53,6 +53,9 @@ pip install PyAudio‑0.2.11‑cp<version>‑cp<version>m‑win_amd<architecture
 sudo apt-get update && sudo apt-get install espeak
 
 ```
+
+
+<img src="jarvis1.jpg"/>
 
 ### What it does...
 
