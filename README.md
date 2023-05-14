@@ -77,12 +77,13 @@ sudo apt-get update && sudo apt-get install espeak
 <table>
   <tr>
     <td><img src="images/Screenshot%20(138).png"/></td>
+      <td><img src="https://github.com/GauravSingh9356/J.A.R.V.I.S/blob/master/images/face-600x900.png"/></td>
+    
 
 </tr>
 <tr>
 <td><img src="images/email.jpg"/></td>
-
-<td><img src="images/location.png"/></td>
+<td><img src="https://github.com/GauravSingh9356/J.A.R.V.I.S/blob/master/images/maxresdefault.jpg"/></td>
 </tr>
 <td><img src="images/pytube.png"/></td>
   <td><img src="https://github.com/GauravSingh9356/J.A.R.V.I.S/blob/master/images/face-600x900.png"/></td>
