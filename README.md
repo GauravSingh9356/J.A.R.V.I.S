@@ -86,7 +86,12 @@ sudo apt-get update && sudo apt-get install espeak
 </tr>
 <td><img src="images/pytube.png"/></td>
 </tr>
-<tr></tr>
+<tr>
+  <td><img src="canny.jpg"/>
+          </td>
+  <td><img src="ImgContor.jpg"/>
+          </td>
+</tr>
 </table>
 
 ## Some Sneak peeks:
