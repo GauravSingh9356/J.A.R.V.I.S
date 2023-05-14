@@ -85,8 +85,8 @@ sudo apt-get update && sudo apt-get install espeak
 <td><img src="images/email.jpg"/></td>
 <td><img src="https://github.com/GauravSingh9356/J.A.R.V.I.S/blob/master/images/maxresdefault.jpg"/></td>
 </tr>
-<td><img src="images/pytube.png"/></td>
-  <td><img src="https://github.com/GauravSingh9356/J.A.R.V.I.S/blob/master/images/face-600x900.png"/></td>
+<td><img src="https://github.com/GauravSingh9356/J.A.R.V.I.S/blob/master/images/4-Best-Weather-Forecast-APIs-for-Development-of-Weather-Apps-624x304.jpeg"/></td>
+  <td><img src="https://github.com/GauravSingh9356/J.A.R.V.I.S/blob/master/images/maxresdefault%20(1).jpg"/></td>
 </tr>
 <tr>
   <td><img src="canny.jpg"/>
