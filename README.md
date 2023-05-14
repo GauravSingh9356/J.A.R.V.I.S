@@ -85,6 +85,7 @@ sudo apt-get update && sudo apt-get install espeak
 <td><img src="images/location.png"/></td>
 </tr>
 <td><img src="images/pytube.png"/></td>
+  <td><img src="https://github.com/GauravSingh9356/J.A.R.V.I.S/blob/master/images/face-600x900.png"/></td>
 </tr>
 <tr>
   <td><img src="canny.jpg"/>
