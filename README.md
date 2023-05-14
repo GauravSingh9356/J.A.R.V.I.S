@@ -34,6 +34,7 @@
 <li>pyjokes</li>
 <li>psutil</li>
 <li> pyautogui</li>
+<li> opencv</li>
 
 <h2>Required Packages</h2>
 
@@ -56,6 +57,7 @@ sudo apt-get update && sudo apt-get install espeak
 ### What it does...
 
   <ul>
+   <li>Dynamic Authentication using Optical Face Recognition</li>
 <li>Send emails</li>
   <li>Dynamic News Reporting at any time with api integration</li>
   <li>Todo list generator, Yes it remembers all!</li> 
@@ -84,6 +86,7 @@ sudo apt-get update && sudo apt-get install espeak
 </tr>
 <td><img src="images/pytube.png"/></td>
 </tr>
+<tr></tr>
 </table>
 
 ## Some Sneak peeks:
