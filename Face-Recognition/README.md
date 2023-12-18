@@ -1,5 +1,5 @@
 # Face-Recognition in Python
-Face Recognition tutorial refference for https://youtu.be/BG3mpdzk0Rw
+Face Recognition tutorial reference for https://youtu.be/BG3mpdzk0Rw
 
 
 # Prerequisites
@@ -11,5 +11,6 @@ Face Recognition tutorial refference for https://youtu.be/BG3mpdzk0Rw
 
 # steps
 [ run the Sample generator.py and enter a unique numeric id to create face samples with your face ]
+
 [ run Model Trainer.py ]
 [ run Face recognition.py ]
