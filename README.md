@@ -1,5 +1,5 @@
-<h1 align="center">J.A.R.V.I.S </h1> 
 
+<img src="https://github.com/GauravSingh9356/J.A.R.V.I.S/blob/master/ReadmeHeader.gif">
 <div align="center">
   
 [![Welcome to my profile](https://img.shields.io/badge/Hello,Devs!-Welcome-blue.svg?style=flat&logo=github)](https://github.com/gauravsingh9356/J.A.R.V.I.S)
@@ -15,13 +15,14 @@
 
 
 
-<img src="jarvis1.jpg"/>
+
 
 ### Requirements:
 
 <li>datetime</li>
 <li>os</li>
 <li> pyttsx3</li>
+<li> tesseract</li>
 <li> wikipedia</li>
 <li> speech_recognition </li>
 <li> webbrowser</li>
@@ -54,12 +55,16 @@ sudo apt-get update && sudo apt-get install espeak
 
 ```
 
+
+<img src="jarvis1.jpg"/>
+
 ### What it does...
 
   <ul>
    <li>Dynamic Authentication using Optical Face Recognition</li>
 <li>Send emails</li>
   <li>Dynamic News Reporting at any time with api integration</li>
+   <li>Optical Character Recognition (OCR)</li>
   <li>Todo list generator, Yes it remembers all!</li> 
 <li>Open any website with just a voice command</li>
 <li>Plays Music</li>
@@ -104,6 +109,8 @@ sudo apt-get update && sudo apt-get install espeak
   
   <li><h2> Jarvis, What are today's news headlines? can you tell?</h2></li>
   <li><h2>Ofcourse, Sir -> Then news headlines   Would you like to visit the news url?</h2></li>
+  
+   <li><h2>Open Text Recognition</h2></li>
   
   <li><h2> Search Youtube</h2></li>
   <li><h2>What you want to search, Sir</h2></li>
