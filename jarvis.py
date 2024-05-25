@@ -5,6 +5,7 @@ import webbrowser
 import datetime
 import os
 import sys
+import time
 import smtplib
 from news import speak_news, getNewsUrl
 from OCR import OCR
@@ -15,12 +16,16 @@ from sys import platform
 import os
 import getpass
 import cv
+from geopy.geocoders import Nominatim
+import time
+from pprint import pprint
 
 engine = pyttsx3.init()
 voices = engine.getProperty('voices')
-engine.setProperty('voice', voices[0].id)
+engine.setProperty('rate',190)
+engine.setProperty('voice', voices[1].id)
 
-# print(voices[0].id)
+
 
 class Jarvis:
     def __init__(self) -> None:
@@ -42,15 +47,15 @@ class Jarvis:
     def wishMe(self) -> None:
         hour = int(datetime.datetime.now().hour)
         if hour >= 0 and hour < 12:
-            speak("Good Morning SIR")
+            speak("Good Morning.")
         elif hour >= 12 and hour < 18:
-            speak("Good Afternoon SIR")
+            speak("Good Afternoon.")
 
         else:
-            speak('Good Evening SIR')
+            speak('Good Evening.')
 
-        #weather()
-        speak('I am JARVIS. Please tell me how can I help you SIR?')
+        weather()
+        speak('How can I help you')
 
     def sendEmail(self, to, content) -> None:
         server = smtplib.SMTP('smtp.gmail.com', 587)
@@ -62,6 +67,8 @@ class Jarvis:
 
     def execute_query(self, query):
         # TODO: make this more concise
+        #if not 'friday' in query:
+        #    return
         if 'wikipedia' in query:
             speak('Searching Wikipedia....')
             query = query.replace('wikipedia', '')
@@ -71,19 +78,11 @@ class Jarvis:
             speak(results)
         elif 'youtube downloader' in query:
             exec(open('youtube_downloader.py').read())
-            
-        
-            
-        elif 'voice' in query:
-            if 'female' in query:
-                engine.setProperty('voice', voices[1].id)
-            else:
-                engine.setProperty('voice', voices[0].id)
-            speak("Hello Sir, I have switched my voice. How is it?")
 
-        if 'jarvis are you there' in query:
+
+        if 'Friday are you there' in query:
             speak("Yes Sir, at your service")
-        if 'jarvis who made you' in query:
+        if 'Friday who made you' in query:
             speak("Yes Sir, my master build me in AI")
             
          
@@ -95,7 +94,7 @@ class Jarvis:
         elif 'open amazon' in query:
             webbrowser.get('chrome').open_new_tab('https://amazon.com')
 
-        elif 'cpu' in query:
+        elif 'CPU' in query:
             cpu()
 
         elif 'joke' in query:
@@ -129,6 +128,8 @@ class Jarvis:
                 url)
             speak('Here is What I found for' + search)
 
+        elif 'weather' in query:
+            weather()
         elif 'location' in query:
             speak('What is the location?')
             location = takeCommand()
@@ -144,7 +145,7 @@ class Jarvis:
                 speak(name, 'is my master. He is running me right now')
 
         elif 'your name' in query:
-            speak('My name is JARVIS')
+            speak('My name is Friday')
         elif 'who made you' in query:
             speak('I was created by my AI master in 2021')
             
@@ -179,19 +180,20 @@ class Jarvis:
             webbrowser.get('chrome').open_new_tab(
                 'https://github.com/gauravsingh9356')
 
-        elif 'remember that' in query:
-            speak("what should i remember sir")
+        elif 'remember' in query:
+            speak('what should I remember?')
             rememberMessage = takeCommand()
             speak("you said me to remember"+rememberMessage)
             remember = open('data.txt', 'w')
             remember.write(rememberMessage)
             remember.close()
 
-        elif 'do you remember anything' in query:
+        elif 'recall' in query:
             remember = open('data.txt', 'r')
             speak("you said me to remember that" + remember.read())
 
         elif 'sleep' in query:
+            speak('I am going offline boss.')
             sys.exit()
 
         elif 'dictionary' in query:
@@ -209,14 +211,9 @@ class Jarvis:
                 speak('You can now read the full news from this website.')
             else:
                 speak('No Problem Sir')
-
-        elif 'voice' in query:
-            if 'female' in query:
-                engine.setProperty('voice', voices[0].id)
-            else:
-                engine.setProperty('voice', voices[1].id)
-            speak("Hello Sir, I have switched my voice. How is it?")
-
+        elif 'location' in query:
+            content = takeCommand()
+            self.location()
         elif 'email to gaurav' in query:
             try:
                 speak('What should I say?')
@@ -227,7 +224,6 @@ class Jarvis:
 
             except Exception as e:
                 speak('Sorry sir, Not able to send email at the moment')
-
 
 def wakeUpJARVIS():
     bot_ = Jarvis()
