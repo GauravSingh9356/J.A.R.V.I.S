@@ -11,4 +11,10 @@ pywhatkit
 geocoder
 
 # NOTE: PyAudio is usually required for microphone input (SpeechRecognition).
-# On Windows it's easiest to install via pipwin (instructions in PR body).
+# On Windows it's easiest to install via pipwin:
+#   pip install pipwin
+#   pipwin install pyaudio
+# Alternatively download a matching PyAudio wheel from:
+#   https://www.lfd.uci.edu/~gohlke/pythonlibs/#pyaudio
+# and install with:
+#   pip install <path-to-wheel-file>
