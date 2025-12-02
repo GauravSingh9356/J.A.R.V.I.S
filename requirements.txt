@@ -26,7 +26,7 @@ PyScreeze==0.1.28
 pyttsx3==2.90
 pytube==11.0.1
 pytweening==1.0.4
-pywin32==302
+pywin32==303
 ratelim==0.1.6
 requests==2.26.0
 six==1.16.0
